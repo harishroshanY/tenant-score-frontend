@@ -2,7 +2,7 @@
 
 A comprehensive React + Vite + Tailwind CSS frontend application for property management, tenant scoring, and short-stay bookings.
 
-**GitHub:** https://github.com/Shavirajput/tenant-score-frontend
+**GitHub:** https://github.com/harishroshanY/tenant-score-frontend
 
 ---
 
@@ -270,7 +270,7 @@ localStorage.clear()
 
 ## 👨‍💻 Author
 
-**Shavi Rajput** - shavirajput0761@gmail.com
+**Harishroshan Y** - harishbooja@gmail.com
 
 ---
 
