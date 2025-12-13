@@ -1,1 +1,0 @@
-# tenant-score-frontend
