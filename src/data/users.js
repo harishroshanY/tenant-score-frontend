@@ -1,9 +1,9 @@
 const users = [
   {
     id: 1,
-    name: "Shavi Kumari",
+    name: "Harish",
     role: "Tenant",
-    email: "shavi@example.com",
+    email: "harish@example.com",
     status: "Active",
   },
   {
