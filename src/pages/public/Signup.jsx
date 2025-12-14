@@ -1,22 +1,19 @@
-import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Signup() {
-  const navigate = useNavigate();
-
   return (
-    <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
-      <h1 className="text-3xl font-bold mb-6 text-center">Sign Up</h1>
-
-      <input className="w-full border p-2 mb-4 rounded" placeholder="Name" />
-      <input className="w-full border p-2 mb-4 rounded" placeholder="Email" />
-      <input className="w-full border p-2 mb-6 rounded" placeholder="Password" type="password" />
-
-      <button
-        onClick={() => navigate("/login")}
-        className="w-full bg-green-600 text-white py-2 rounded"
+    <div className="min-h-screen bg-gray-950 flex items-center justify-center text-white">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="bg-white/10 backdrop-blur-xl p-10 rounded-2xl w-96"
       >
-        Create Account
-      </button>
+        <h2 className="text-3xl font-bold mb-6">Signup</h2>
+        <input className="w-full p-3 mb-4 bg-white/10 rounded" placeholder="Name" />
+        <input className="w-full p-3 mb-4 bg-white/10 rounded" placeholder="Email" />
+        <input className="w-full p-3 mb-6 bg-white/10 rounded" placeholder="Password" />
+        <button className="w-full py-3 bg-blue-600 rounded-xl">Create Account</button>
+      </motion.div>
     </div>
   );
 }

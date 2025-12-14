@@ -1,8 +1,9 @@
-import users from "../../data/users";
 import Table from "../../components/Table";
+import { getAllUsers } from "../../utils/auth";
 
 export default function Users() {
   const columns = ["Name", "Role", "Email", "Status"];
+  const users = getAllUsers();
 
   return (
     <div>

@@ -1,17 +1,33 @@
-import { getRole, logout, switchRole } from "../utils/auth";
-import { useNavigate } from "react-router-dom";
+import { getRole, logout, switchRole, isAuth } from "../utils/auth";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Header() {
   const role = getRole() || "Guest";
   const navigate = useNavigate();
+  const auth = isAuth();
 
   const handleRoleSwitch = (newRole) => {
     if (switchRole(newRole)) {
-      // Redirect to new role dashboard
       navigate(`/${newRole}`);
-      window.location.reload(); // Reload to ensure sidebar updates
+      window.location.reload();
     }
   };
+
+  if (!auth) {
+    return (
+      <header className="bg-white shadow px-6 py-4 flex justify-between items-center">
+        <h2 className="text-xl font-semibold">TenantScore</h2>
+        <div className="flex items-center gap-4">
+          <Link to="/login" className="text-sm text-blue-600 hover:underline">
+            Login
+          </Link>
+          <Link to="/signup" className="text-sm bg-green-600 text-white px-3 py-1 rounded">
+            Sign Up
+          </Link>
+        </div>
+      </header>
+    );
+  }
 
   return (
     <header className="bg-white shadow px-6 py-4 flex justify-between items-center">
