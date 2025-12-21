@@ -1,17 +1,9 @@
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import { auth, googleProvider, db } from "./firebase";
 import { doc, getDoc } from "firebase/firestore";
-
-export const loginUser = (email, password) => {
-  return signInWithEmailAndPassword(auth, email, password);
-};
-
-export const loginWithGoogle = () => {
-  return signInWithPopup(auth, googleProvider);
-};
+import { db } from "./firebase";
 
 export const redirectByRole = async (uid, navigate) => {
-  const snap = await getDoc(doc(db, "users", uid));
+  const ref = doc(db, "users", uid);
+  const snap = await getDoc(ref);
 
   if (!snap.exists()) {
     navigate("/login");
