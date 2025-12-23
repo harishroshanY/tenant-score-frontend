@@ -88,7 +88,7 @@ export default function Signup() {
       }
 
       toast.success("Account created successfully 🎉");
-      setTimeout(() => navigate("/login"), 1200);
+      setTimeout(() => navigate("/"), 1200);
 
     } catch (err) {
       toast.error(err.message);
@@ -155,7 +155,7 @@ export default function Signup() {
 
           <p className="mt-6 text-sm text-gray-400">
             Already have an account?{" "}
-            <Link to="/login" className="text-blue-400">Login</Link>
+            <Link to="/Login" className="text-blue-400">Login</Link>
           </p>
         </div>
 

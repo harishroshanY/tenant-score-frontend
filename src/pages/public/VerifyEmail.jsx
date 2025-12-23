@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 export default function VerifyEmail() {
   const navigate = useNavigate();
-  const [checking, setChecking] = useState(true);
+
   const [verified, setVerified] = useState(false);
 
   useEffect(() => {
@@ -24,8 +24,6 @@ export default function VerifyEmail() {
           navigate("/login");
         }, 2000);
       }
-
-      setChecking(false);
     }, 3000);
 
     return () => clearInterval(interval);
