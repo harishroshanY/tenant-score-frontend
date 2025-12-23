@@ -9,7 +9,7 @@ const bookings = [
   },
   {
     id: 2,
-    property: "Green Valley",
+    property: "Green Valy",
     city: "Pune",
     date: "05 Jul 2025",
     status: "Completed",
